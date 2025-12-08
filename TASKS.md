@@ -8,14 +8,14 @@ Based on the Project Requirements Document (`pr.md`)
 
 | # | Task | Description | Status |
 |---|------|-------------|--------|
-| 1.1 | Project Setup | Create Android project with Kotlin, configure Gradle, set min SDK to API 26+ | ⬜ |
-| 1.2 | Firebase Integration | Set up Firebase project, add `google-services.json`, configure dependencies | ⬜ |
-| 1.3 | Firebase Authentication Setup | Configure Email/Password authentication in Firebase Console | ⬜ |
-| 1.4 | Login Screen UI | Design and implement login screen following Material Design | ⬜ |
-| 1.5 | Signup Screen UI | Design and implement signup/registration screen | ⬜ |
-| 1.6 | Authentication Logic | Implement Firebase Auth login/signup/logout functionality | ⬜ |
-| 1.7 | Profile Management Screen | Create screen for users to update personal details | ⬜ |
-| 1.8 | Navigation Setup | Set up navigation component for screen flow | ⬜ |
+| 1.1 | Project Setup | Create Android project with Kotlin, configure Gradle, set min SDK to API 26+ | ✅ |
+| 1.2 | Firebase Integration | Set up Firebase project, add `google-services.json`, configure dependencies | ✅ |
+| 1.3 | Firebase Authentication Setup | Configure Email/Password authentication in Firebase Console | ✅ |
+| 1.4 | Login Screen UI | Design and implement login screen following Material Design | ✅ |
+| 1.5 | Signup Screen UI | Design and implement signup/registration screen | ✅ |
+| 1.6 | Authentication Logic | Implement Firebase Auth login/signup/logout functionality | ✅ |
+| 1.7 | Profile Management Screen | Create screen for users to update personal details | ✅ |
+| 1.8 | Navigation Setup | Set up navigation component for screen flow | ✅ |
 
 ---
 
@@ -89,12 +89,12 @@ Based on the Project Requirements Document (`pr.md`)
 
 | Phase | Task Count | Completed |
 |-------|------------|-----------|
-| Phase 1: Setup & Authentication | 8 tasks | 0/8 |
+| Phase 1: Setup & Authentication | 8 tasks | 8/8 ✅ |
 | Phase 2: Image Capture & Storage | 11 tasks | 0/11 |
 | Phase 3: AI Core Integration | 8 tasks | 0/8 |
 | Phase 4: Visualization & Logic | 9 tasks | 0/9 |
 | Phase 5: Testing & Launch | 10 tasks | 0/10 |
-| **Total** | **46 tasks** | **0/46** |
+| **Total** | **46 tasks** | **8/46** |
 
 ---
 

@@ -221,7 +221,7 @@ fun ProfileScreen(
                             colors = ButtonDefaults.outlinedButtonColors(
                                 contentColor = MaterialTheme.colorScheme.error
                             ),
-                            border = ButtonDefaults.outlinedButtonBorder.copy(
+                            border = ButtonDefaults.outlinedButtonBorder(enabled = !isLoading).copy(
                                 brush = Brush.linearGradient(
                                     colors = listOf(
                                         MaterialTheme.colorScheme.error.copy(alpha = 0.5f),
@@ -479,4 +479,3 @@ fun ProfileScreenLoadingPreview() {
         )
     }
 }
-

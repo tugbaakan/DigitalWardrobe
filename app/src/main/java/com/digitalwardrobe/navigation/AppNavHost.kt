@@ -19,7 +19,13 @@ import com.digitalwardrobe.ui.screens.auth.ForgotPasswordDialog
 import com.digitalwardrobe.ui.screens.auth.LoginScreen
 import com.digitalwardrobe.ui.screens.auth.PasswordResetSentDialog
 import com.digitalwardrobe.ui.screens.auth.SignUpScreen
+import com.digitalwardrobe.ui.screens.bodyphoto.BodyPhotoUploadScreen
+import com.digitalwardrobe.ui.screens.garment.AddGarmentScreen
+import com.digitalwardrobe.ui.screens.garment.GarmentDetailScreen
+import com.digitalwardrobe.ui.screens.garment.GarmentMetadata
+import com.digitalwardrobe.ui.screens.garment.GarmentMetadataScreen
 import com.digitalwardrobe.ui.screens.home.HomeScreen
+import com.digitalwardrobe.ui.screens.wardrobe.WardrobeScreen
 import com.digitalwardrobe.ui.screens.profile.ProfileNavigationEvent
 import com.digitalwardrobe.ui.screens.profile.ProfileScreen
 import com.digitalwardrobe.ui.screens.profile.ProfileViewModel
@@ -136,8 +142,7 @@ fun AppNavHost(
                     navController.navigate(NavRoutes.Profile.route)
                 },
                 onWardrobeClick = {
-                    // Will navigate to wardrobe in Phase 2
-                    // navController.navigate(NavRoutes.Wardrobe.route)
+                    navController.navigate(NavRoutes.WardrobeView.route)
                 },
                 onOutfitsClick = {
                     // Will navigate to outfits in Phase 4
@@ -189,11 +194,78 @@ fun AppNavHost(
             )
         }
 
+        // Body Photo Upload Screen (Phase 2)
+        composable(NavRoutes.BodyPhotoUpload.route) {
+            BodyPhotoUploadScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onPhotoSelected = { photoUri ->
+                    // TODO: Handle photo selection - will save to storage and navigate next
+                    // For now, just show a placeholder
+                }
+            )
+        }
+
+        // Add Garment Screen (Phase 2)
+        composable(NavRoutes.AddGarment.route) {
+            AddGarmentScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onGarmentAdded = { garmentUri ->
+                    // Navigate to garment metadata tagging screen
+                    navController.navigate(NavRoutes.GarmentMetadata.createRoute(garmentUri))
+                }
+            )
+        }
+
+        // Garment Metadata Screen (Phase 2)
+        composable(NavRoutes.GarmentMetadata.route) { backStackEntry ->
+            val imageUri = backStackEntry.arguments?.getString("imageUri") ?: ""
+            GarmentMetadataScreen(
+                garmentImageUri = imageUri,
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onSaveGarment = { metadata ->
+                    // TODO: Save garment to Firebase Storage and Firestore
+                    // For now, just navigate back to home
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        // Wardrobe View Screen (Phase 2)
+        composable(NavRoutes.WardrobeView.route) {
+            WardrobeScreen(
+                onAddGarmentClick = {
+                    navController.navigate(NavRoutes.AddGarment.route)
+                },
+                onGarmentClick = { garmentId ->
+                    navController.navigate(NavRoutes.GarmentDetail.createRoute(garmentId))
+                }
+            )
+        }
+
+        // Garment Detail Screen (Phase 2)
+        composable(NavRoutes.GarmentDetail.route) { backStackEntry ->
+            val garmentId = backStackEntry.arguments?.getString("garmentId") ?: ""
+            GarmentDetailScreen(
+                garmentId = garmentId,
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onGarmentDeleted = {
+                    // Navigate back to wardrobe after deletion
+                    navController.popBackStack()
+                }
+            )
+        }
+
         // Placeholder for future screens (Phase 2, 4)
         // composable(NavRoutes.Wardrobe.route) { WardrobeScreen(...) }
-        // composable(NavRoutes.AddGarment.route) { AddGarmentScreen(...) }
         // composable(NavRoutes.Outfits.route) { OutfitsScreen(...) }
         // composable(NavRoutes.TryOn.route) { TryOnScreen(...) }
     }
 }
-

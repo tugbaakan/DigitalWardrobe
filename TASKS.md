@@ -23,17 +23,17 @@ Based on the Project Requirements Document (`pr.md`)
 
 | # | Task | Description | Status |
 |---|------|-------------|--------|
-| 2.1 | Firebase Storage Setup | Configure Cloud Storage rules and bucket | ⬜ |
-| 2.2 | Firestore Database Setup | Design and create Firestore collections schema (users, garments, outfits) | ⬜ |
-| 2.3 | Body Photo Upload UI | Create screen for capturing/uploading full-body photo | ⬜ |
-| 2.4 | Camera Integration | Implement camera capture functionality | ⬜ |
-| 2.5 | Gallery Picker | Implement image picker from device gallery | ⬜ |
-| 2.6 | Garment Upload UI | Create screen for uploading individual clothing items | ⬜ |
-| 2.7 | Metadata Tagging UI | Create form for tagging garments (Type, Color, Formality, Fit/Cut) | ⬜ |
-| 2.8 | Image Upload to Firebase | Implement photo upload to Cloud Storage | ⬜ |
-| 2.9 | Metadata Storage | Save garment metadata to Firestore | ⬜ |
-| 2.10 | Wardrobe Gallery View | Create grid view displaying all uploaded garments | ⬜ |
-| 2.11 | Garment Detail/Edit Screen | Allow viewing and editing garment metadata | ⬜ |
+| 2.1 | Firebase Storage Setup | Configure Cloud Storage rules and bucket | ✅ |
+| 2.2 | Firestore Database Setup | Design and create Firestore collections schema (users, garments, outfits) | ✅ |
+| 2.3 | Body Photo Upload UI | Create screen for capturing/uploading full-body photo | ✅ |
+| 2.4 | Camera Integration | Implement camera capture functionality | ✅ |
+| 2.5 | Gallery Picker | Implement image picker from device gallery | ✅ |
+| 2.6 | Garment Upload UI | Create screen for uploading individual clothing items | ✅ |
+| 2.7 | Metadata Tagging UI | Create form for tagging garments (Type, Color, Formality, Fit/Cut) | ✅ |
+| 2.8 | Image Upload to Firebase | Implement photo upload to Cloud Storage | ✅ |
+| 2.9 | Metadata Storage | Save garment metadata to Firestore | ✅ |
+| 2.10 | Wardrobe Gallery View | Create grid view displaying all uploaded garments | ✅ |
+| 2.11 | Garment Detail/Edit Screen | Allow viewing and editing garment metadata | ✅ |
 
 ---
 
@@ -90,11 +90,11 @@ Based on the Project Requirements Document (`pr.md`)
 | Phase | Task Count | Completed |
 |-------|------------|-----------|
 | Phase 1: Setup & Authentication | 8 tasks | 8/8 ✅ |
-| Phase 2: Image Capture & Storage | 11 tasks | 0/11 |
+| Phase 2: Image Capture & Storage | 11 tasks | 11/11 ✅ |
 | Phase 3: AI Core Integration | 8 tasks | 0/8 |
 | Phase 4: Visualization & Logic | 9 tasks | 0/9 |
 | Phase 5: Testing & Launch | 10 tasks | 0/10 |
-| **Total** | **46 tasks** | **8/46** |
+| **Total** | **46 tasks** | **19/46** |
 
 ---
 
@@ -112,4 +112,3 @@ Based on the Project Requirements Document (`pr.md`)
 
 > Update the status column as you progress through each task.
 > Reference `pr.md` for detailed requirements on each feature.
-

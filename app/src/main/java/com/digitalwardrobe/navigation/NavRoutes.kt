@@ -18,7 +18,7 @@ sealed class NavRoutes(val route: String) {
     data object AddGarment : NavRoutes("add_garment")
     data object WardrobeView : NavRoutes("wardrobe_view")
     data object GarmentMetadata : NavRoutes("garment_metadata/{imageUri}") {
-        fun createRoute(imageUri: String) = "garment_metadata/$imageUri"
+        fun createRoute(imageUri: String) = "garment_metadata/${java.net.URLEncoder.encode(imageUri, "UTF-8")}"
     }
     data object GarmentDetail : NavRoutes("garment/{garmentId}") {
         fun createRoute(garmentId: String) = "garment/$garmentId"

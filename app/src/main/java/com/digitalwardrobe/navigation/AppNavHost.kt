@@ -222,7 +222,8 @@ fun AppNavHost(
 
         // Garment Metadata Screen (Phase 2)
         composable(NavRoutes.GarmentMetadata.route) { backStackEntry ->
-            val imageUri = backStackEntry.arguments?.getString("imageUri") ?: ""
+            val encodedImageUri = backStackEntry.arguments?.getString("imageUri") ?: ""
+            val imageUri = java.net.URLDecoder.decode(encodedImageUri, "UTF-8")
             GarmentMetadataScreen(
                 garmentImageUri = imageUri,
                 onBackClick = {

@@ -1,6 +1,8 @@
-# 📋 Virtual Outfit Creator (VOC) - Task List
+# 📋 Digital Wardrobe - Task List
 
 Based on the Project Requirements Document (`pr.md`)
+
+**Backend:** Supabase (PostgreSQL + Auth + Storage)
 
 ---
 
@@ -9,11 +11,11 @@ Based on the Project Requirements Document (`pr.md`)
 | # | Task | Description | Status |
 |---|------|-------------|--------|
 | 1.1 | Project Setup | Create Android project with Kotlin, configure Gradle, set min SDK to API 26+ | ✅ |
-| 1.2 | Firebase Integration | Set up Firebase project, add `google-services.json`, configure dependencies | ✅ |
-| 1.3 | Firebase Authentication Setup | Configure Email/Password authentication in Firebase Console | ✅ |
+| 1.2 | Supabase Integration | Set up Supabase project, add `supabase-kt` SDK, configure dependencies | ⬜ |
+| 1.3 | Supabase Authentication Setup | Configure Email/Password authentication in Supabase Dashboard | ⬜ |
 | 1.4 | Login Screen UI | Design and implement login screen following Material Design | ✅ |
 | 1.5 | Signup Screen UI | Design and implement signup/registration screen | ✅ |
-| 1.6 | Authentication Logic | Implement Firebase Auth login/signup/logout functionality | ✅ |
+| 1.6 | Authentication Logic | Implement Supabase Auth login/signup/logout functionality | ⬜ |
 | 1.7 | Profile Management Screen | Create screen for users to update personal details | ✅ |
 | 1.8 | Navigation Setup | Set up navigation component for screen flow | ✅ |
 
@@ -23,15 +25,15 @@ Based on the Project Requirements Document (`pr.md`)
 
 | # | Task | Description | Status |
 |---|------|-------------|--------|
-| 2.1 | Firebase Storage Setup | Configure Cloud Storage rules and bucket | ✅ |
-| 2.2 | Firestore Database Setup | Design and create Firestore collections schema (users, garments, outfits) | ✅ |
+| 2.1 | Supabase Storage Setup | Configure Storage buckets and policies for images | ⬜ |
+| 2.2 | Supabase Database Setup | Design and create PostgreSQL tables (users, garments, outfits) | ⬜ |
 | 2.3 | Body Photo Upload UI | Create screen for capturing/uploading full-body photo | ✅ |
 | 2.4 | Camera Integration | Implement camera capture functionality | ✅ |
 | 2.5 | Gallery Picker | Implement image picker from device gallery | ✅ |
 | 2.6 | Garment Upload UI | Create screen for uploading individual clothing items | ✅ |
 | 2.7 | Metadata Tagging UI | Create form for tagging garments (Type, Color, Formality, Fit/Cut) | ✅ |
-| 2.8 | Image Upload to Firebase | Implement photo upload to Cloud Storage | ✅ |
-| 2.9 | Metadata Storage | Save garment metadata to Firestore | ✅ |
+| 2.8 | Image Upload to Supabase | Implement photo upload to Supabase Storage | ⬜ |
+| 2.9 | Metadata Storage | Save garment metadata to Supabase PostgreSQL | ⬜ |
 | 2.10 | Wardrobe Gallery View | Create grid view displaying all uploaded garments | ✅ |
 | 2.11 | Garment Detail/Edit Screen | Allow viewing and editing garment metadata | ✅ |
 
@@ -62,7 +64,7 @@ Based on the Project Requirements Document (`pr.md`)
 | 4.4 | Outfit List UI | Display generated outfit combinations in scrollable list | ⬜ |
 | 4.5 | Visualization Screen | Create main try-on visualization screen | ⬜ |
 | 4.6 | Interactive Selection | Implement tap-to-preview outfit functionality | ⬜ |
-| 4.7 | Save Outfit Feature | Allow users to save favorite outfits to Firestore | ⬜ |
+| 4.7 | Save Outfit Feature | Allow users to save favorite outfits to Supabase | ⬜ |
 | 4.8 | Saved Outfits Gallery | Create screen to view saved outfits | ⬜ |
 | 4.9 | Share Outfit Feature | Implement image sharing to social/messaging apps | ⬜ |
 
@@ -89,12 +91,12 @@ Based on the Project Requirements Document (`pr.md`)
 
 | Phase | Task Count | Completed |
 |-------|------------|-----------|
-| Phase 1: Setup & Authentication | 8 tasks | 8/8 ✅ |
-| Phase 2: Image Capture & Storage | 11 tasks | 11/11 ✅ |
+| Phase 1: Setup & Authentication | 8 tasks | 5/8 |
+| Phase 2: Image Capture & Storage | 11 tasks | 6/11 |
 | Phase 3: AI Core Integration | 8 tasks | 0/8 |
 | Phase 4: Visualization & Logic | 9 tasks | 0/9 |
 | Phase 5: Testing & Launch | 10 tasks | 0/10 |
-| **Total** | **46 tasks** | **19/46** |
+| **Total** | **46 tasks** | **11/46** |
 
 ---
 
@@ -112,3 +114,4 @@ Based on the Project Requirements Document (`pr.md`)
 
 > Update the status column as you progress through each task.
 > Reference `pr.md` for detailed requirements on each feature.
+> Backend migrated from Firebase to **Supabase** for cost savings.

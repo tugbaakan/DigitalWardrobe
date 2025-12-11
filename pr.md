@@ -1,11 +1,11 @@
-## 📄 Project Requirements Document: Virtual Outfit Creator (VOC) Android App
+## 📄 Project Requirements Document: Digital Wardrobe Android App
 
 ---
 
 ### **1. Introduction**
 
 #### **1.1. Project Goal**
-The primary goal of the Virtual Outfit Creator (VOC) Android application is to provide users with a tool to **digitize their wardrobe** and virtually **try on** different clothing combinations using their own body photo as the canvas. The application will leverage Computer Vision and AI to accurately segment clothing items and render them realistically onto the user's image.
+The primary goal of the **Digital Wardrobe** Android application is to provide users with a tool to **digitize their wardrobe** and virtually **try on** different clothing combinations using their own body photo as the canvas. The application will leverage Computer Vision and AI to accurately segment clothing items and render them realistically onto the user's image.
 
 #### **1.2. Target Audience**
 Individuals who want to organize their closets, plan outfits, and visualize new combinations without physically trying them on.
@@ -17,7 +17,7 @@ Individuals who want to organize their closets, plan outfits, and visualize new 
 The application must perform the following functions:
 
 #### **2.1. User Management and Authentication**
-* **FR-A1: User Account:** Allow users to create and log into a secure account using **Email/Password (Firebase Authentication)**.
+* **FR-A1: User Account:** Allow users to create and log into a secure account using **Email/Password (Supabase Authentication)**.
 * **FR-A2: Profile Management:** Allow users to update their personal details.
 
 #### **2.2. Image Upload and Wardrobe Digitization**
@@ -47,7 +47,7 @@ The application must perform the following functions:
 #### **3.1. Development Stack**
 * **Mobile Platform:** Android (API 26+)
 * **Language:** **Kotlin (Native Android)** to maximize performance for image processing.
-* **Backend & Data Storage:** **Google Firebase** (Authentication, Firestore for metadata, Cloud Storage for user photos).
+* **Backend & Data Storage:** **Supabase** (Authentication, PostgreSQL for metadata, Supabase Storage for user photos).
 
 #### **3.2. Performance and Data**
 * **TP-1: Processing Time:** Virtual try-on rendering must be completed within **3 seconds** of combination selection.
@@ -79,8 +79,8 @@ The application must perform the following functions:
 
 | Phase | Description | Key Deliverables |
 | :--- | :--- | :--- |
-| **Phase 1** | Setup & Authentication | Firebase Setup, Login/Signup Screens |
-| **Phase 2** | Image Capture & Storage | Garment/Body Upload UI, Photo Storage in Firebase, Metadata Tagging |
+| **Phase 1** | Setup & Authentication | Supabase Setup, Login/Signup Screens |
+| **Phase 2** | Image Capture & Storage | Garment/Body Upload UI, Photo Storage in Supabase, Metadata Tagging |
 | **Phase 3** | AI Core Integration | ML Model Integration (Segmentation, Pose), Warping Logic Implementation |
 | **Phase 4** | Visualization & Logic | Outfit Combination Algorithm, Final Rendering View, Saved Outfits Feature |
 | **Phase 5** | Testing & Launch | Bug Fixing, Performance Optimization, Google Play Store Submission |
